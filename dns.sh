@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck shell=dash
 
 #
 # Starts a DNS server resolving hostnames from config files to the given IP.
@@ -16,7 +17,7 @@ set -e
 # Returns the hostnames from the config files as Dnsmasq address mapping:
 map_hostname_file() {
   local line
-  while read line; do
+  while read -r line; do
     # Skip empty lines and lines starting with a hash (#):
     ([ -z "$line" ] || [ "${line#\#}" != "$line" ]) && continue
     # Print each hostname separated by a forward slash:
@@ -25,7 +26,6 @@ map_hostname_file() {
 }
 
 map_hostname_files() {
-  local hostnames=''
   local file
   for file; do
   	if [ ! -f "$file" ]; then
