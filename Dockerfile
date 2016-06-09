@@ -4,7 +4,7 @@
 
 FROM alpine:3.4
 
-# Install tini and dnsmasq:
+# Install dnsmasq:
 RUN apk --no-cache add \
   dnsmasq
 
