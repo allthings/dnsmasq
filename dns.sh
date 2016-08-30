@@ -19,7 +19,7 @@ map_hostname_file() {
   local line
   while read -r line; do
     # Skip empty lines and lines starting with a hash (#):
-    ([ -z "$line" ] || [ "${line#\#}" != "$line" ]) && continue
+    [ -z "$line" ] || [ "${line#\#}" != "$line" ] && continue
     # Print each hostname separated by a forward slash:
     printf '/%s' "$line"
   done < "$1"
