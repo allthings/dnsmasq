@@ -7,7 +7,7 @@ Run Dnsmasq with `example.org` and `example.com` pointing to `192.0.2.1`:
 
 ```sh
 docker run -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN -d --name=dnsmasq \
-  qipp/dnsmasq -A /example.org/example.com/192.0.2.1
+  allthings/dnsmasq -A /example.org/example.com/192.0.2.1
 ```
 
 Send a query for `example.org` to the Dnsmasq container:
