@@ -39,4 +39,4 @@ example.org
 ```
 
 ## License
-Released under the [MIT license](http://www.opensource.org/licenses/MIT).
+Released under the [MIT license](https://opensource.org/licenses/MIT).
