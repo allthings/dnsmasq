@@ -2,7 +2,7 @@
 # Dnsmasq
 #
 
-FROM alpine:3.4
+FROM alpine:3.8
 
 # Install dnsmasq:
 RUN apk --no-cache add \
